@@ -5,7 +5,7 @@ import StatsCard from "../cards/StatsCard";
 export default function Stats() {
   return (
     <Fragment>
-      <Box>
+      <Box sx={{ pt: 7, pb: 7 }}>
         <Container>
           <Typography variant="h4" align="center" gutterBottom>
             Our global class is open for all

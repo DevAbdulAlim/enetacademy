@@ -4,7 +4,7 @@ import CategoryCard from "../cards/CategoryCard";
 
 export default function Category() {
   return (
-    <Box>
+    <Box sx={{ pt: 7, pb: 7 }}>
       <Container>
         <Typography variant="h6" align="center">
           CATEGORY
