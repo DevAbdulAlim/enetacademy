@@ -1,57 +1,19 @@
-import { Fragment } from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Box, Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
+import React, { Fragment } from "react";
+import CustomizedAccordions from "./CustomizedAccordions";
 
 export default function Faq() {
   return (
     <Fragment>
-      <Box>
+      <Box id="faq" pt="3rem" pb="3rem">
         <Container>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>Accordion 1</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel2a-content"
-              id="panel2a-header"
-            >
-              <Typography>Accordion 2</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel3a-content"
-              id="panel3a-header"
-            >
-              <Typography>Disabled Accordion</Typography>
-            </AccordionSummary>
-          </Accordion>
+          <Typography color="primary.main" variant="h6" align="center">
+            FAQ
+          </Typography>
+          <Typography pb={2} align="center" variant="h4" gutterBottom>
+            Frequently asked questions
+          </Typography>
+          <CustomizedAccordions />
         </Container>
       </Box>
     </Fragment>

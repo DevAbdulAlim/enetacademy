@@ -5,23 +5,29 @@ import StatsCard from "../cards/StatsCard";
 export default function Stats() {
   return (
     <Fragment>
-      <Box sx={{ pt: 7, pb: 7 }}>
+      <Box id="about" sx={{ backgroundColor: "#f1f8ff" }} pt={4} pb={4}>
         <Container>
-          <Typography variant="h4" align="center" gutterBottom>
-            Our global class is open for all
+          <Typography color="primary.main" variant="h6" align="center">
+            ABOUT
           </Typography>
-          <Typography variant="p" component="p" align="center" gutterBottom>
-            The best way to learn is by using skills. That's why every class has
-            a project that lets you practice and get feedback.
-          </Typography>
-          <Stack
-            direction="row"
-            alignItems="center"
-            justifyContent="center"
-            spacing={2}
-          >
-            <Button variant="contained">Explore More</Button>
+          <Stack spacing={2}>
+            <Typography variant="h4" align="center">
+              Our global class is open for all
+            </Typography>
+            <Typography color="text.secondary" align="center">
+              The best way to learn is by using skills. That's why every class
+              has a project that lets you practice and get feedback.
+            </Typography>
+            <Stack
+              pb={2}
+              direction="row"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Button variant="contained">Explore More</Button>
+            </Stack>
           </Stack>
+
           <br />
           <StatsCard />
         </Container>

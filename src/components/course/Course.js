@@ -4,20 +4,23 @@ import CourseCard from "../cards/CourseCard";
 
 export default function Course() {
   return (
-    <Box sx={{ pt: 7, pb: 7 }}>
+    <Box id="courses" sx={{ backgroundColor: "aliceblue" }} pt={8} pb={8}>
       <Container>
-        <Typography variant="h6" align="center">
-          POPULAR COURSES
+        <Typography color="primary.main" variant="h6" align="center">
+          COURSES
         </Typography>
-        <Typography variant="h5" align="center">
-          Browse our popular courses
-        </Typography>
-        <Typography variant="p" align="center">
-          Here are our popular course you might want to learn from your tutor.
-        </Typography>
-        <Stack direction="row" justifyContent="center">
-          <Button>View all</Button>
+        <Stack spacing={2}>
+          <Typography variant="h4" align="center">
+            Browse our popular courses
+          </Typography>
+          <Typography color="text.secondary" align="center">
+            Here are our popular course you might want to learn from your tutor.
+          </Typography>
+          <Stack pb={4} direction="row" justifyContent="center">
+            <Button variant="outlined">View all &gt;&gt;</Button>
+          </Stack>
         </Stack>
+
         <CourseCard />
       </Container>
     </Box>

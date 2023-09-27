@@ -14,7 +14,7 @@ export default function Home() {
       <Stats />
       <Category />
       <Course />
-      <Feature />
+
       <Faq />
       <Footer />
     </Fragment>

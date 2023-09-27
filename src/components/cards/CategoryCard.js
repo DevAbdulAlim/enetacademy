@@ -1,4 +1,5 @@
-import { Button, Card, Grid, Typography } from "@mui/material";
+import { Button, Stack, Card, Grid, Typography, Paper } from "@mui/material";
+import ComputerIcon from "@mui/icons-material/Computer";
 
 const data = [
   {
@@ -44,13 +45,51 @@ const data = [
 ];
 export default function CategoryCard() {
   return (
-    <Grid container spacing={4}>
+    <Grid
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="stretch"
+      spacing={4}
+    >
       {data.map((item) => (
-        <Grid item xs={12} sm={6} md={3}>
-          <Card sx={{ height: 200 }}>
-            <Typography variant="h5">{item.d1}</Typography>
-            <Typography>{item.d2}</Typography>
-            <Button variant="contained">Learn More</Button>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ padding: "2rem", backgroundColor: "#1976d20d" }}>
+            <Stack pb={3} justifyContent="center" alignItems="center">
+              <Stack
+                justifyContent="center"
+                alignItems="center"
+                sx={{
+                  borderRadius: "1rem",
+                  height: "65px",
+                  width: "65px",
+                  backgroundColor: "#1565c0",
+                }}
+              >
+                <ComputerIcon
+                  sx={{
+                    fontSize: "2.5rem",
+                    textAlign: "center",
+                    color: "white",
+                  }}
+                />
+              </Stack>
+            </Stack>
+
+            <Typography align="center" variant="h5" gutterBottom>
+              {item.d1}
+            </Typography>
+            <Typography
+              sx={{ overflow: "hidden" }}
+              color="text.secondary"
+              align="center"
+              gutterBottom
+            >
+              {item.d2}
+            </Typography>
+            <Stack>
+              <Button>See Course &gt;&gt;</Button>
+            </Stack>
           </Card>
         </Grid>
       ))}
